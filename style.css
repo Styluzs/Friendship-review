@@ -119,8 +119,10 @@ pre {
     gap: 20px;
 }
 
-.final-screen {
-    text-align: center;
+.final-screen{
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .final-screen h1 {
@@ -158,10 +160,11 @@ margin:0;
 }
 .player-row{
 display:flex;
-justify-content:space-between;
+justify-content:center;
+gap:500px;
 align-items:center;
 margin-top:30px;
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 .player{
@@ -181,20 +184,25 @@ border:3px solid #2ea043;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:40px;
-margin:40px 0;
+gap:80px;
+margin:20px 0 40px 0;
 }
 
 .fennec{
-width:350px;
-max-width:40%;
+width:500px;
+max-width:none;
 }
 
 .green-fennec{
+transform:none;
+}
+
+.red-fennec{
 transform:scaleX(-1);
 }
 
 .handshake{
-font-size:36px;
-margin-top:30px;
+font-size:56px;
+margin-top:20px;
+color:#2ea043;
 }
