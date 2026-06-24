@@ -130,3 +130,29 @@ pre {
 .final-screen h3 {
     color: #2ea043;
 }
+.user-card{
+display:flex;
+align-items:center;
+gap:15px;
+margin:20px 0;
+}
+
+.avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #30363d;
+}
+
+.role{
+color:#8b949e;
+font-size:14px;
+margin:0;
+}
+
+.name{
+font-size:28px;
+font-weight:bold;
+margin:0;
+}
