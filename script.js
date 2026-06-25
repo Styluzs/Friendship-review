@@ -90,5 +90,3 @@ joinBtn.addEventListener("click", () => {
     }, 2500);
 
 });
-
-});
