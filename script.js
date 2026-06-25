@@ -122,8 +122,6 @@ if(index >= lines.length){
     ...
 }
 
-    stats.classList.remove("hidden");
-
     setTimeout(()=>{
         bar1.style.width="100%";
         value1.innerHTML="100%";
