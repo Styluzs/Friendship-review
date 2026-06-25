@@ -27,7 +27,7 @@ function startTerminal() {
         "✓ Endless game nights: completed",
         "✓ Karaoke bar parties: survived",
         "✓ New Year's Eve with random (baked) strangers: unlocked",
-        "✓ Road trip to the UK: completed",
+        "✓ Road trip to Liverpool: completed",
         "✓ Everton victory over Arsenal: witnessed",
         "✓ Austrian snowboarding adventure: completed",
         "✓ Being the favourite teammate: confirmed",
@@ -54,7 +54,20 @@ function startTerminal() {
 
     const interval = setInterval(() => {
 
-        terminalOutput.innerHTML += lines[index] + "\n";
+let line = lines[index];
+
+// Groene woorden
+line = line.replace("completed", "<span class='green'>completed</span>");
+line = line.replace("survived", "<span class='green'>survived</span>");
+line = line.replace("unlocked", "<span class='green'>unlocked</span>");
+line = line.replace("witnessed", "<span class='green'>witnessed</span>");
+line = line.replace("confirmed", "<span class='green'>confirmed</span>");
+line = line.replace("verified", "<span class='green'>verified</span>");
+
+// Oranje woord
+line = line.replace("ongoing", "<span class='orange'>ongoing</span>");
+
+terminalOutput.innerHTML += line + "<br>";
 
         index++;
 
