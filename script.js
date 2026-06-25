@@ -94,8 +94,8 @@ line = line.replace("ongoing", "<span class='orange'>ongoing</span>");
 
 // Gouden achievement
 line = line.replace(
-    "🏆 Achievement unlocked!",
-    "<span style='color:#FFD700;'>🏆 Achievement unlocked!</span>"
+    "Achievement unlocked!",
+    "<span style='color:#FFD700; font-weight:bold;'>🏆 Achievement unlocked!</span>"
 );
 
 // Groene eindconclusie
