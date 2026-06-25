@@ -134,25 +134,21 @@ setTimeout(()=>{
 setTimeout(()=>{
     bar2.style.width="100%";
     value2.innerHTML="Legendary";
-},1000);
+},2400);
 
 setTimeout(()=>{
     bar3.style.width="100%";
     value3.innerHTML="Elite";
-},1700);
+},4500);
 
 setTimeout(()=>{
     bar4.style.width="100%";
     value4.innerHTML="S-Tier";
-},2400);
+},6600);
 
 setTimeout(()=>{
     unlockBtn.classList.remove("hidden");
-},3400);
-
-        }
-
-    }, 700);
+},9000);
 
 }
 
