@@ -119,7 +119,6 @@ if(index >= lines.length){
 
     stats.classList.remove("hidden");
 
-    ...
 }
 
     setTimeout(()=>{
