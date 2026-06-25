@@ -213,9 +213,12 @@ align-items:center;
 }
 
 .full-image{
-max-width:100%;
-width:900px;
-border-radius:12px;
+    width:700px;
+    max-width:90%;
+    height:auto;
+    border-radius:12px;
+    display:block;
+    margin:auto;
 }
 
 .button-row{
