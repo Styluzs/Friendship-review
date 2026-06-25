@@ -62,13 +62,6 @@ function startTerminal() {
 
 "",
 
-"✓ Trust Level: 100%",
-"✓ Loyalty: Legendary",
-"✓ Reliability: Elite",
-"✓ Team Chemistry: S-Tier",
-
-"",
-
 "Searching for final achievement...",
 
 "",
@@ -120,36 +113,31 @@ terminalOutput.innerHTML += line + "<br>";
 
         index++;
 
-                if(index >= lines.length){
+              if(line === "Analyzing candidate..."){
 
-            clearInterval(interval);
+    stats.classList.remove("hidden");
 
-            stats.classList.remove("hidden");
+    setTimeout(()=>{
+        bar1.style.width="100%";
+        value1.innerHTML="100%";
+    },300);
 
-            setTimeout(()=>{
-                bar1.style.width="100%";
-                value1.innerHTML="100%";
-            },300);
+    setTimeout(()=>{
+        bar2.style.width="100%";
+        value2.innerHTML="Legendary";
+    },1800);
 
-            setTimeout(()=>{
-                bar2.style.width="100%";
-                value2.innerHTML="Legendary";
-            },2400);
+    setTimeout(()=>{
+        bar3.style.width="100%";
+        value3.innerHTML="Elite";
+    },3300);
 
-            setTimeout(()=>{
-                bar3.style.width="100%";
-                value3.innerHTML="Elite";
-            },4500);
+    setTimeout(()=>{
+        bar4.style.width="100%";
+        value4.innerHTML="S-Tier";
+    },4800);
 
-            setTimeout(()=>{
-                bar4.style.width="100%";
-                value4.innerHTML="S-Tier";
-            },6600);
-
-            setTimeout(()=>{
-                unlockBtn.classList.remove("hidden");
-            },9000);
-
+}
         }
 
     },700);
