@@ -18,36 +18,61 @@ function startTerminal() {
     screen2.classList.add("active");
 
     const lines = [
-        "$ npm run friendship",
-        "",
-        "Initializing friendship...",
-        "",
-        "Loading memories...",
-        "",
-        "✓ Endless game nights: completed",
-        "✓ Karaoke bar parties: survived",
-        "✓ New Year's Eve with random (baked) strangers: unlocked",
-        "✓ Road trip to Liverpool: completed",
-        "✓ Everton victory over Arsenal: witnessed",
-        "✓ Austrian snowboarding adventure: completed",
-        "✓ Being the favourite teammate: confirmed",
-        "✓ Road to Champ: ongoing",
-        "",
-        "Analyzing candidate...",
-        "",
-        "✓ Trust level: 100%",
-        "✓ Loyalty: Legendary",
-        "✓ Reliability: Elite",
-        "✓ Team chemistry: S-Tier",
-        "",
-        "Searching for final achievement...",
-        "",
-        "Achievement found.",
-        "",
-        "Reviewing all memories...",
-        "",
-        "Result:",
-        "Worth keeping on the team."
+
+"$ npm run friendship",
+
+"",
+
+"Initializing friendship...",
+
+"",
+
+"Loading memories...",
+
+"",
+
+"✓ Endless game nights ............................ completed",
+"✓ Karaoke bar parties ............................ survived",
+"✓ New Year's Eve with random (baked) strangers ... unlocked",
+"✓ Road trip to Liverpool ......................... completed",
+"✓ Everton victory over Arsenal ................... witnessed",
+"✓ Austrian snowboarding adventure ................ completed",
+"✓ Being the favourite teammate ................... confirmed",
+"✓ Road to Champ .................................. ongoing",
+
+"",
+
+"----------------------------------------------",
+
+"",
+
+"Analyzing candidate...",
+
+"",
+
+"✓ Trust Level: 100%",
+"✓ Loyalty: Legendary",
+"✓ Reliability: Elite",
+"✓ Team Chemistry: S-Tier",
+
+"",
+
+"Searching for final achievement...",
+
+"",
+
+"Achievement unlocked!",
+
+"",
+
+"Reviewing all memories...",
+
+"",
+
+"Result:",
+
+"Worth keeping on the team."
+
     ];
 
     let index = 0;
@@ -66,6 +91,18 @@ line = line.replace("verified", "<span class='green'>verified</span>");
 
 // Oranje woord
 line = line.replace("ongoing", "<span class='orange'>ongoing</span>");
+
+// Gouden achievement
+line = line.replace(
+    "🏆 Achievement unlocked!",
+    "<span style='color:#FFD700;'>🏆 Achievement unlocked!</span>"
+);
+
+// Groene eindconclusie
+line = line.replace(
+    "Worth keeping on the team.",
+    "<span class='green'>Worth keeping on the team.</span>"
+);
 
 terminalOutput.innerHTML += line + "<br>";
 
