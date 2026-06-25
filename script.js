@@ -5,6 +5,7 @@ const joinBtn = document.getElementById("joinBtn");
 const screen1 = document.getElementById("screen1");
 const screen2 = document.getElementById("screen2");
 const screen3 = document.getElementById("screen3");
+const loadingScreen = document.getElementById("loadingScreen");
 const screen4 = document.getElementById("screen4");
 
 const terminalOutput = document.getElementById("terminalOutput");
@@ -79,6 +80,15 @@ unlockBtn.addEventListener("click", () => {
 joinBtn.addEventListener("click", () => {
 
     screen3.classList.remove("active");
-    screen4.classList.add("active");
+    loadingScreen.classList.add("active");
+
+    setTimeout(() => {
+
+        loadingScreen.classList.remove("active");
+        screen4.classList.add("active");
+
+    }, 2500);
+
+});
 
 });
