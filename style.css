@@ -337,6 +337,22 @@ pre{
 
 }
 
+.result-title{
+
+    display:block;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    color:white;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+}
+
 /* =====================================================
    DLC SCREEN
 ===================================================== */
