@@ -1,324 +1,606 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: white;
+/* =====================================================
+   FRIENDSHIP REVIEW v2.0
+===================================================== */
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0d1117;
+    color:white;
 }
 
-.screen {
-    display: none;
-    min-height: 100vh;
-    padding: 40px;
+/* =====================================================
+   ALGEMEEN
+===================================================== */
+
+.screen{
+    display:none;
+    min-height:100vh;
+    padding:40px;
+    box-sizing:border-box;
 }
 
-.active {
-    display: block;
+.active{
+    display:block;
+}
+
+.hidden{
+    display:none;
 }
 
 .card,
-.terminal,
-.achievement,
-.final-screen {
-    max-width: 1000px;
-    margin: auto;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 30px;
+.terminal{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:14px;
+
+    padding:32px;
+
+    box-shadow:0 0 25px rgba(0,0,0,.35);
+
 }
 
-h1 {
-    margin-top: 0;
+/* =====================================================
+   TITELS
+===================================================== */
+
+h1{
+
+    margin-top:0;
+
+    margin-bottom:10px;
+
 }
 
-h2 {
-    color: #2ea043;
+h2{
+
+    color:#2ea043;
+
+    margin-bottom:30px;
+
 }
 
-.review-box {
-    background: #0d1117;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
+h3{
+
+    margin-top:0;
+
 }
 
-.approved {
-    color: #2ea043;
-    font-weight: bold;
+/* =====================================================
+   PULL REQUEST
+===================================================== */
+
+.user-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:22px 0;
+
 }
 
-button {
-    margin-top: 25px;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
+.avatar{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #30363d;
+
+}
+
+.role{
+
+    color:#8b949e;
+
+    font-size:14px;
+
+    margin:0;
+
+}
+
+.name{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.review-box{
+
+    background:#0d1117;
+
+    border-radius:10px;
+
+    padding:22px;
+
+    margin-top:25px;
+
+}
+
+.review-box ul{
+
+    padding-left:22px;
+
+    line-height:1.9;
+
+}
+
+.approved{
+
+    color:#2ea043;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button{
+
+    margin-top:30px;
+
+    padding:16px 32px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
 }
 
 #approveBtn,
-#unlockBtn {
-    background: #2ea043;
-    color: white;
+#unlockBtn{
+
+    background:#2ea043;
+
+    color:white;
+
 }
 
-button:disabled {
-    background: #444;
-    color: #888;
-    cursor: not-allowed;
+#approveBtn:hover,
+#unlockBtn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 18px rgba(46,160,67,.55);
+
 }
 
-.hidden {
-    display: none;
+/* =====================================================
+   TERMINAL
+===================================================== */
+
+.terminal{
+
+    background:black;
+
+    font-family:Consolas, monospace;
+
 }
 
-.terminal {
-    font-family: Consolas, monospace;
-    background: black;
-    color: white;
+pre{
+
+    white-space:pre-wrap;
+
+    line-height:1.9;
+
+    font-size:17px;
+
 }
 
-pre {
-    white-space: pre-wrap;
-    line-height: 1.8;
+.green{
+
+    color:#2ea043;
+
 }
 
-.green {
-    color: #2ea043;
+.orange{
+
+    color:#ff9800;
+
 }
 
-.orange {
-    color: #ff9800;
+.gold{
+
+    color:#FFD700;
+
+    font-weight:bold;
+
 }
 
-.achievement {
-    text-align: center;
+/* =====================================================
+   ANALYZING CANDIDATE
+===================================================== */
+
+#stats{
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+    border-top:1px solid #30363d;
+
+    animation:fadeIn .6s ease;
+
 }
 
-.achievement h1 {
-    color: gold;
+.stat{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin:22px 0;
+
 }
 
-.requirements {
-    text-align: left;
-    margin: 30px auto;
-    max-width: 700px;
+.stat span:first-child{
+
+    width:180px;
+
+    font-weight:bold;
+
 }
 
-.question {
-    margin-top: 40px;
-    padding: 25px;
-    border: 2px solid gold;
-    border-radius: 12px;
+.stat span:last-child{
+
+    width:110px;
+
+    color:#2ea043;
+
+    font-weight:bold;
+
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.bar{
+
+    flex:1;
+
+    height:14px;
+
+    background:#22272e;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:1px solid #30363d;
+
 }
 
-.final-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#2ea043,#43d36d);
+
+    box-shadow:
+
+        0 0 8px rgba(46,160,67,.8),
+
+        0 0 18px rgba(46,160,67,.4);
+
+    transition:width 2.0s ease;
+
 }
 
-.final-screen h1 {
-    color: #1f6feb;
+/* =====================================================
+   RESULT
+===================================================== */
+
+.final-result{
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#2ea043;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    text-shadow:0 0 12px rgba(46,160,67,.45);
+
 }
 
-.final-screen h3 {
-    color: #2ea043;
-}
+/* =====================================================
+   DLC SCREEN
+===================================================== */
 
-.user-card {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 20px 0;
-}
+.dlc-container{
 
-.avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #30363d;
-}
+    position:relative;
 
-.role {
-    color: #8b949e;
-    font-size: 14px;
-    margin: 0;
-}
+    width:900px;
 
-.name {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-}
+    max-width:96%;
 
-.player-row {
-    display: flex;
-    justify-content: center;
-    gap: 500px;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.player {
-    text-align: center;
-    width: 200px;
-}
-
-.final-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #2ea043;
-}
-
-.fennec-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    margin: 20px 0 40px 0;
-}
-
-.fennec {
-    width: 500px;
-}
-
-.green-fennec {
-    transform: none;
-}
-
-.red-fennec {
-    transform: scaleX(-1);
-}
-
-.handshake {
-    font-size: 56px;
-    margin-top: 20px;
-    color: #2ea043;
-}
-
-/* =======================================
-   SCREEN 3 (BEST MAN DLC)
-======================================= */
-
-.dlc-container {
-
-    position: relative;
-
-    width: 700px;
-
-    max-width: 95%;
-
-    margin: auto;
+    margin:auto;
 
 }
 
 .dlc-image{
 
-width:900px;
+    width:100%;
 
-max-width:95%;
+    display:block;
 
-height:auto;
+    border-radius:14px;
 
-display:block;
-
-margin:auto;
+    box-shadow:0 0 35px rgba(0,0,0,.45);
 
 }
 
-/* Onzichtbare knop over JOIN PARTY */
+/* =====================================================
+   JOIN BUTTON
+===================================================== */
 
-.overlay-join {
+.overlay-join{
 
-    position: absolute;
-
-    left: 6%;
-
-    bottom: 2.5%;
-
-    width: 41%;
-
-    height: 8.5%;
-
-    background: transparent;
-
-    border: none;
-
-    cursor: pointer;
-
-    margin: 0;
-
-    padding: 0;
-
-}
-
-/* Onzichtbare knop over DECLINE */
-
-.overlay-decline{
     position:absolute;
 
-    right:4%;
-    bottom:2.7%;
+    left:5.7%;
 
-    width:43%;
-    height:8.6%;
+    bottom:2.5%;
+
+    width:41%;
+
+    height:8.5%;
 
     background:transparent;
+
     border:none;
+
+    cursor:pointer;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+/* =====================================================
+   DECLINE BUTTON
+===================================================== */
+
+.overlay-decline{
+
+    position:absolute;
+
+    right:3.8%;
+
+    bottom:2.5%;
+
+    width:41%;
+
+    height:8.5%;
+
+    background:transparent;
+
+    border:none;
+
     cursor:not-allowed;
 
     margin:0;
+
     padding:0;
+
 }
 
-/* =======================================
-   SCREEN 4
-======================================= */
+/* =====================================================
+   LOADING + TEAM LOCKED IN
+===================================================== */
+
+.loading-container,
+.locked-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =====================================================
+   TEAM LOCKED IN
+===================================================== */
 
 .team-image{
-    width:1000px;
+
+    width:1100px;
+
     max-width:95%;
+
+    height:auto;
+
     display:block;
+
     margin:auto;
-}
-#stats{
-    margin-top:25px;
-    font-family:Consolas, monospace;
+
+    border-radius:14px;
+
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+
+    animation:fadeIn .8s ease;
+
 }
 
-.stat{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin:18px 0;
+/* =====================================================
+   FADE ANIMATION
+===================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
-.stat span:first-child{
-    width:170px;
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width:900px){
+
+    .card,
+    .terminal{
+
+        padding:22px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+    .name{
+
+        font-size:22px;
+
+    }
+
+    .avatar{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .stat{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .stat span:first-child{
+
+        width:auto;
+
+    }
+
+    .bar{
+
+        width:100%;
+
+    }
+
+    .overlay-join{
+
+        left:5.8%;
+
+        bottom:2.4%;
+
+        width:41%;
+
+        height:8.5%;
+
+    }
+
+    .overlay-decline{
+
+        right:3.8%;
+
+        bottom:2.4%;
+
+        width:41%;
+
+        height:8.5%;
+
+    }
+
 }
 
-.bar{
-    width:240px;
-    height:12px;
+/* =====================================================
+   EXTRA POLISH
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
     background:#30363d;
+
     border-radius:20px;
-    overflow:hidden;
+
 }
 
-.fill{
-    width:0%;
-    height:100%;
+::-webkit-scrollbar-track{
+
+    background:#0d1117;
+
+}
+
+::selection{
+
     background:#2ea043;
-    transition:width 1.8s ease;
+
+    color:white;
+
 }
