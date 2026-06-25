@@ -10,6 +10,18 @@ const screen4 = document.getElementById("screen4");
 
 const terminalOutput = document.getElementById("terminalOutput");
 
+const stats = document.getElementById("stats");
+
+const bar1=document.getElementById("bar1");
+const bar2=document.getElementById("bar2");
+const bar3=document.getElementById("bar3");
+const bar4=document.getElementById("bar4");
+
+const value1=document.getElementById("value1");
+const value2=document.getElementById("value2");
+const value3=document.getElementById("value3");
+const value4=document.getElementById("value4");
+
 approveBtn.addEventListener("click", startTerminal);
 
 function startTerminal() {
@@ -112,7 +124,31 @@ terminalOutput.innerHTML += line + "<br>";
 
             clearInterval(interval);
 
-            unlockBtn.classList.remove("hidden");
+stats.classList.remove("hidden");
+
+setTimeout(()=>{
+    bar1.style.width="100%";
+    value1.innerHTML="100%";
+},300);
+
+setTimeout(()=>{
+    bar2.style.width="100%";
+    value2.innerHTML="Legendary";
+},1000);
+
+setTimeout(()=>{
+    bar3.style.width="100%";
+    value3.innerHTML="Elite";
+},1700);
+
+setTimeout(()=>{
+    bar4.style.width="100%";
+    value4.innerHTML="S-Tier";
+},2400);
+
+setTimeout(()=>{
+    unlockBtn.classList.remove("hidden");
+},3400);
 
         }
 
