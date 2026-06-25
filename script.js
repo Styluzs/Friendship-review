@@ -119,8 +119,6 @@ if(index >= lines.length){
 
     stats.classList.remove("hidden");
 
-}
-
     setTimeout(()=>{
         bar1.style.width="100%";
         value1.innerHTML="100%";
@@ -141,8 +139,9 @@ if(index >= lines.length){
         value4.innerHTML="S-Tier";
     },4800);
 
-}
-        }
+    setTimeout(()=>{
+        unlockBtn.classList.remove("hidden");
+    },5200);
 
     },700);
 
