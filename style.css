@@ -620,3 +620,22 @@ pre{
     color:white;
 
 }
+.result-title{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-size:28px;
+    font-weight:bold;
+    color:#ffffff;
+    letter-spacing:2px;
+}
+
+.final-result{
+    display:block;
+    margin-top:8px;
+    margin-bottom:15px;
+    font-size:36px;
+    font-weight:bold;
+    color:#2ea043;
+    text-shadow:0 0 12px rgba(46,160,67,.55);
+}
