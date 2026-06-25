@@ -292,3 +292,33 @@ margin:auto;
     display:block;
     margin:auto;
 }
+#stats{
+    margin-top:25px;
+    font-family:Consolas, monospace;
+}
+
+.stat{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:18px 0;
+}
+
+.stat span:first-child{
+    width:170px;
+}
+
+.bar{
+    width:240px;
+    height:12px;
+    background:#30363d;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    width:0%;
+    height:100%;
+    background:#2ea043;
+    transition:width .8s ease;
+}
