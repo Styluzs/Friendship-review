@@ -113,7 +113,14 @@ terminalOutput.innerHTML += line + "<br>";
 
         index++;
 
-              if(line === "Analyzing candidate..."){
+if(index >= lines.length){
+
+    clearInterval(interval);
+
+    stats.classList.remove("hidden");
+
+    ...
+}
 
     stats.classList.remove("hidden");
 
