@@ -103,10 +103,16 @@ line = line.replace(
     "<span style='color:#FFD700; font-weight:bold;'>🏆 Achievement unlocked!</span>"
 );
 
+// RESULT groter
+line = line.replace(
+    "Result:",
+    "<span class='result-title'>RESULT</span>"
+);
+
 // Groene eindconclusie
 line = line.replace(
     "Worth keeping on the team.",
-    "<span class='green'>Worth keeping on the team.</span>"
+    "<span class='final-result'>🏆 Worth keeping on the team.</span>"
 );
 
 terminalOutput.innerHTML += line + "<br>";
