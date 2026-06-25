@@ -111,7 +111,7 @@ line = line.replace(
 
 terminalOutput.innerHTML += line + "<br>";
 
-        index++;
+index++;
 
 if(index >= lines.length){
 
@@ -143,7 +143,9 @@ if(index >= lines.length){
         unlockBtn.classList.remove("hidden");
     },5200);
 
-    },700);
+}
+
+},700);
 
 }
 
