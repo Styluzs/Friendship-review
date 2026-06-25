@@ -223,13 +223,17 @@ pre {
 
 }
 
-.dlc-image {
+.dlc-image{
 
-    width: 100%;
+width:900px;
 
-    display: block;
+max-width:95%;
 
-    border-radius: 12px;
+height:auto;
+
+display:block;
+
+margin:auto;
 
 }
 
