@@ -45,7 +45,7 @@ function startTerminal() {
 
 "✓ Endless game nights ............................ completed",
 "✓ Karaoke bar parties ............................ survived",
-"✓ New Year's Eve with random (baked) strangers ... unlocked",
+"✓ New Year's Eve with random (baked) strangers ... survived",
 "✓ Road trip to Liverpool ......................... completed",
 "✓ Everton victory over Arsenal ................... witnessed",
 "✓ Austrian snowboarding adventure ................ completed",
@@ -86,10 +86,15 @@ function startTerminal() {
 
 let line = lines[index];
 
-// Groene woorden
+// Eerst de complete achievement vervangen
+line = line.replace(
+    "Achievement unlocked!",
+    "<span style='color:#FFD700; font-weight:bold; text-shadow:0 0 10px #FFD700;'>🏆 Achievement unlocked!</span>"
+);
+
+// Daarna pas de losse groene woorden
 line = line.replace("completed", "<span class='green'>completed</span>");
 line = line.replace("survived", "<span class='green'>survived</span>");
-line = line.replace("unlocked", "<span class='green'>unlocked</span>");
 line = line.replace("witnessed", "<span class='green'>witnessed</span>");
 line = line.replace("confirmed", "<span class='green'>confirmed</span>");
 line = line.replace("verified", "<span class='green'>verified</span>");
