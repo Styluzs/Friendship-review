@@ -89,7 +89,7 @@ let line = lines[index];
 // Eerst de complete achievement vervangen
 line = line.replace(
     "Achievement unlocked!",
-    "<span style='color:#FFD700; font-weight:bold; text-shadow:0 0 10px #FFD700;'>🏆 Achievement unlocked!</span>"
+    "<span style='color:#FFD700; font-weight:bold; text-shadow:0 0 10px #FFD700;'> Achievement unlocked!</span>"
 );
 
 // Daarna pas de losse groene woorden
