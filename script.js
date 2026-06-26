@@ -176,6 +176,6 @@ joinBtn.addEventListener("click", () => {
         loadingScreen.classList.remove("active");
         screen4.classList.add("active");
 
-    }, 2500);
+    }, 5000);
 
 });
