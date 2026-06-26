@@ -76,8 +76,6 @@ function startTerminal() {
 
 "Analyzing candidate...",
 
-"",
-
         ];
 
     let index = 0;
