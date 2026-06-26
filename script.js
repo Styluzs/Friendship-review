@@ -164,6 +164,8 @@ unlockBtn.addEventListener("click", () => {
     screen2.classList.remove("active");
     screen3.classList.add("active");
 
+    window.scrollTo(0, 0);
+
 });
 
 joinBtn.addEventListener("click", () => {
