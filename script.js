@@ -58,10 +58,6 @@ function startTerminal() {
 
 "",
 
-"Analyzing candidate...",
-
-"",
-
 "Searching for final achievement...",
 
 "",
@@ -78,7 +74,11 @@ function startTerminal() {
 
 "Worth keeping on the team."
 
-    ];
+"Analyzing candidate...",
+
+"",
+
+        ];
 
     let index = 0;
 
