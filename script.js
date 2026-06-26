@@ -72,7 +72,7 @@ function startTerminal() {
 
 "Result:",
 
-"Worth keeping on the team."
+"Worth keeping on the team.",
 
 "",
         
