@@ -75,9 +75,8 @@ function startTerminal() {
 "Worth keeping on the team.",
 
 "",
-        
-"Analyzing candidate...",
 
+"Analyzing candidate...",
         ];
 
     let index = 0;
