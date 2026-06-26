@@ -74,6 +74,8 @@ function startTerminal() {
 
 "Worth keeping on the team."
 
+"",
+        
 "Analyzing candidate...",
 
         ];
