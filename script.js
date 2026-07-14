@@ -43,14 +43,15 @@ function startTerminal() {
 
 "",
 
-"✓ Endless game nights ............................ completed",
-"✓ Karaoke bar parties ............................ survived",
-"✓ New Year's Eve with random (baked) strangers ... survived",
-"✓ Road trip to Liverpool ......................... completed",
-"✓ Everton victory over Arsenal ................... witnessed",
-"✓ Austrian snowboarding adventure ................ completed",
-"✓ Being the favourite teammate ................... confirmed",
-"✓ Road to Champ .................................. ongoing",
+"✓ Endless game nights ................................ completed",
+"✓ Karaoke bar parties ................................. survived",
+"✓ New Year's Eve with random (baked) strangers ........ survived",
+"✓ Road trip to Liverpool ............................. completed",
+"✓ Everton victory over Arsenal ....................... witnessed",
+"✓ Austrian snowboarding adventure .................... completed",
+"✓ Being the favourite teammate ....................... confirmed",
+"✓ Delivering 1000's of Christmas trees ............... confirmed",
+"✓ Road to Grand Champ .................................. ongoing",
 
 "",
 
