@@ -5,8 +5,11 @@ const joinBtn = document.getElementById("joinBtn");
 const screen1 = document.getElementById("screen1");
 const screen2 = document.getElementById("screen2");
 const screen3 = document.getElementById("screen3");
+const messageScreen = document.getElementById("messageScreen");
 const loadingScreen = document.getElementById("loadingScreen");
 const screen4 = document.getElementById("screen4");
+
+const continueBtn = document.getElementById("continueBtn");
 
 const terminalOutput = document.getElementById("terminalOutput");
 
@@ -163,10 +166,22 @@ if(index >= lines.length){
 unlockBtn.addEventListener("click", () => {
 
     screen2.classList.remove("active");
+    messageScreen.classList.add("active");
+
+    window.scrollTo(0,0);
+
+    setTimeout(() => {
+        continueBtn.classList.remove("hidden");
+    },10000);
+
+    continueBtn.addEventListener("click", () => {
+
+    messageScreen.classList.remove("active");
     screen3.classList.add("active");
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
 
+});
 });
 
 joinBtn.addEventListener("click", () => {
