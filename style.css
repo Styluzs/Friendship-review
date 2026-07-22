@@ -639,9 +639,6 @@ pre{
     color:#2ea043;
     text-shadow:0 0 12px rgba(46,160,67,.55);
 }
-.hidden {
-    display: none;
-}
 
 .failed {
     color: #ff4d4d;
