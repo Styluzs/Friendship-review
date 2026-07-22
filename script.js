@@ -10,6 +10,12 @@ const loadingScreen = document.getElementById("loadingScreen");
 const screen4 = document.getElementById("screen4");
 
 const continueBtn = document.getElementById("continueBtn");
+const msg2 = document.getElementById("msg2");
+const msg3 = document.getElementById("msg3");
+const msg4 = document.getElementById("msg4");
+const msg5 = document.getElementById("msg5");
+const msg6 = document.getElementById("msg6");
+const msg7 = document.getElementById("msg7");
 
 const terminalOutput = document.getElementById("terminalOutput");
 
@@ -170,10 +176,17 @@ unlockBtn.addEventListener("click", () => {
 
     window.scrollTo(0,0);
 
-    setTimeout(() => {
-        continueBtn.classList.remove("hidden");
-    },10000);
+setTimeout(() => msg2.classList.remove("hidden"), 1000);
+setTimeout(() => msg3.classList.remove("hidden"), 2000);
+setTimeout(() => msg4.classList.remove("hidden"), 3000);
+setTimeout(() => msg5.classList.remove("hidden"), 4000);
+setTimeout(() => msg6.classList.remove("hidden"), 5000);
+setTimeout(() => msg7.classList.remove("hidden"), 6000);
 
+setTimeout(() => {
+    continueBtn.classList.remove("hidden");
+},16000);
+    
     continueBtn.addEventListener("click", () => {
 
     messageScreen.classList.remove("active");
